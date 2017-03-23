@@ -20,7 +20,7 @@
         </activity>
         <meta-data
             android:name="com.parse.APPLICATION_ID"
-            android:value="{APPLICATION_ID}" />
+            android:value="93bd0b59a90d46b1999e484431b83f41" />
 
     </application>
 

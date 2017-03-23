@@ -22,9 +22,9 @@ public class ChatApplication extends Application {
 
         // For open-source Parse backend
         Parse.initialize(new Parse.Configuration.Builder(this)
-                .applicationId("YOUR_APPLICATION_ID") // should correspond to APP_ID env variable
+                .applicationId("93bd0b59a90d46b1999e484431b83f41") // should correspond to APP_ID env variable
                 .addNetworkInterceptor(new ParseLogInterceptor())
-                .server("https://myparseapp.herokuapp.com/parse/").build());
+                .server("https://simplechatclient.herokuapp.com/parse/").build());
 
     }
 }

@@ -35,6 +35,7 @@ public class ChatActivity extends AppCompatActivity {
     Button btSend;
     @BindView(R.id.lvChat)
     ListView lvChat;
+
     ArrayList<Message> mMessages;
     ChatListAdapter mAdapter;
     // Keep track of initial load to scroll to the bottom of the ListView
@@ -55,6 +56,7 @@ public class ChatActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
+        ButterKnife.bind(this);
         if (ParseUser.getCurrentUser() != null) {
             startWithCurrentUser();
         } else {
@@ -107,7 +109,7 @@ public class ChatActivity extends AppCompatActivity {
         // Construct query to execute
         ParseQuery<Message> query = ParseQuery.getQuery(Message.class);
         // Configure limit and sort order
-        query.setLimit(MAX_CHAT_MESSAGES_TO_SHOW);
+        query.setLimit(10);
 
         // get the latest 500 messages, order will show up newest to oldest of this group
         query.orderByDescending("createdAt");
